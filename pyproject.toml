@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "live-to-carousel"
+name = "infinite-content"
 version = "0.1.0"
-description = "Turn long-form source material (live transcripts, podcasts, docs) into platform-ready carousel posts."
+description = "Long-form source → ranked ideas → platform-ready carousel posts. One source, infinite content."
 requires-python = ">=3.12"
 readme = "README.md"
 license = { text = "MIT" }
@@ -29,10 +29,10 @@ dev = [
 ]
 
 [project.scripts]
-ltc = "live_to_carousel.cli:main"
+ic = "infinite_content.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["live_to_carousel*"]
+include = ["infinite_content*"]
 
 [tool.ruff]
 line-length = 100

@@ -1,8 +1,8 @@
-"""`ltc` entry point.
+"""`ic` entry point.
 
-    ltc init         — run Phase 0 onboarding wizard
-    ltc check        — validate config.json without running anything
-    ltc run <src>    — execute the pipeline (refuses if onboarding incomplete)
+    ic init         — run Phase 0 onboarding wizard
+    ic check        — validate config.json without running anything
+    ic run <src>    — execute the pipeline (refuses if onboarding incomplete)
 """
 from __future__ import annotations
 
@@ -16,7 +16,7 @@ from . import onboarding
 
 @click.group()
 def main() -> None:
-    """live-to-carousel — long-form source → ranked ideas → carousel PNGs → published."""
+    """infinite-content — long-form source → ranked ideas → carousel PNGs → published."""
 
 
 @main.command("init")
@@ -57,7 +57,7 @@ def run_cmd(source: str | None) -> None:
         sys.exit(2)
     problems = onboarding.assert_ready(config)
     if problems:
-        click.echo("Pipeline gate closed. Fix these and re-run `ltc check`:", err=True)
+        click.echo("Pipeline gate closed. Fix these and re-run `ic check`:", err=True)
         for p in problems:
             click.echo(f"  - {p}", err=True)
         sys.exit(1)

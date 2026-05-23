@@ -1,6 +1,6 @@
-# live-to-carousel
+# infinite-content
 
-Turn long-form source material — YouTube live transcripts, podcast audio, docs, threads — into platform-ready carousel posts. Five stages, one onboarding gate, idea de-dup across runs.
+One long-form source — a live, a podcast, a doc, a thread — turned into platform-ready carousels, over and over, without repeating itself. Five stages, one onboarding gate, idea de-dup across runs.
 
 ## Status
 
@@ -21,8 +21,8 @@ Onboarding (Phase 0) gates everything. If `config.json` is missing required fiel
 ```bash
 python -m venv .venv && source .venv/bin/activate
 pip install -e .
-ltc init      # Phase 0 onboarding wizard
-ltc run <source>
+ic init      # Phase 0 onboarding wizard
+ic run <source>
 ```
 
 ## What you need before first run

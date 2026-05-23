@@ -38,7 +38,7 @@ def _prompt_path(label: str, must_exist: bool = True, optional: bool = False) ->
 
 
 def run_wizard() -> Config:
-    click.echo("live-to-carousel — onboarding")
+    click.echo("infinite-content — onboarding")
     click.echo("This is a one-time setup. Every field is required unless marked optional.\n")
 
     click.echo("# Source")

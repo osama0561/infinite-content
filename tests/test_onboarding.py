@@ -5,8 +5,8 @@ from pathlib import Path
 
 import pytest
 
-from live_to_carousel import config as cfg
-from live_to_carousel.onboarding import assert_ready
+from infinite_content import config as cfg
+from infinite_content.onboarding import assert_ready
 
 
 def _make_config(tmp_path: Path, **overrides) -> cfg.Config:
