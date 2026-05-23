@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "live-to-carousel"
+version = "0.1.0"
+description = "Turn long-form source material (live transcripts, podcasts, docs) into platform-ready carousel posts."
+requires-python = ">=3.12"
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = [
+    "anthropic>=0.40.0",
+    "pillow>=11.0.0",
+    "requests>=2.32.0",
+    "pydantic>=2.9.0",
+    "click>=8.1.0",
+    "python-slugify>=8.0.0",
+]
+
+[project.optional-dependencies]
+transcribe = [
+    "yt-dlp>=2025.1.0",
+    "openai-whisper>=20240930",
+]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.7.0",
+]
+
+[project.scripts]
+ltc = "live_to_carousel.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["live_to_carousel*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
